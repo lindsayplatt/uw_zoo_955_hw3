@@ -29,6 +29,12 @@ shape1 = k +1
 #shape 2 = n-k+1, where n is total number of observations
 shape2 = n-k+1
 
-plot(dbeta(lateSeason$changed, shape1 , shape2))
+# make a framework to plot the density against
+quantFish = seq(0, 1, 0.01)
 
+# calculating the density, mainly based on n and k
+densityFish = dbeta(quantFish, shape1 , shape2)
+
+# plot the density function
+plot(quantFish, densityFish)
 
