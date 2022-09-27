@@ -35,6 +35,10 @@ quantFish = seq(0, 1, 0.01)
 # calculating the density, mainly based on n and k
 densityFish = dbeta(quantFish, shape1 , shape2)
 
+##### Question 1.1 #####
+
 # plot the density function
 plot(quantFish, densityFish)
+     
+##### Question 1.2 #####
 
