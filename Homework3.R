@@ -14,9 +14,21 @@ data <- data %>% filter(!is.na(Date_at_recapture)) %>%
 
 data <- data %>% mutate(month = month(Date_at_recapture))
 
+# filter for data taken after July
 lateSeason <- data %>% filter(month > 7)
 
+# make a column of true/false which says whether a female change sex
 lateSeason <- lateSeason %>% mutate(changed = (Sex_at_capture == "F" & Sex_at_recapture != "F"))
 
+#shape 1 = k+1, number of successes (9)
+k = sum(lateSeason$changed)
+n = nrow(lateSeason)
+
+shape1 = k +1
+
+#shape 2 = n-k+1, where n is total number of observations
+shape2 = n-k+1
+
+plot(dbeta(lateSeason$changed, shape1 , shape2))
 
 
