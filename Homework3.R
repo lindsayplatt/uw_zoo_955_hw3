@@ -1,11 +1,12 @@
 library(xlsx)
+library(readxl)
 library(tidyverse)
 library(lubridate)
 
 
 
 # reading in the data
-data = read.xlsx("BSB_tagging_data.xlsx", sheetIndex = 1)
+data = read_xlsx("BSB_tagging_data.xlsx")
 
 # removing NA values from the data
 data <- data %>% filter(!is.na(Date_at_recapture)) %>% 
