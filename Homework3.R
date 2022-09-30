@@ -43,3 +43,14 @@ plot(quantFish, densityFish)
      
 ##### Question 1.2 #####
 
+# create a vector of probabilities
+p <- c(0.05, 0.95)
+
+qbeta(p, shape1, shape2)
+
+##### Question 1.3a #####
+
+##### Question 1.3b #####
+
+
+
