@@ -43,3 +43,11 @@ plot(quantFish, densityFish)
      
 ##### Question 1.2 #####
 
+qbeta(quantFish, shape1, shape2)
+
+##### Question 1.3a #####
+
+##### Question 1.3b #####
+
+
+
